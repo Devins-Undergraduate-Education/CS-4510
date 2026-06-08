@@ -10,10 +10,4 @@ Theory coursework archive for automata, computability, and complexity, including
 
 ## Archive Notes
 
-This repository was prepared from a local Georgia Tech coursework folder for documentation and archival purposes. Generated dependency folders, nested Git metadata, local build outputs, compressed archives, and OS metadata were excluded during preparation.
-
-Original local source:
-
-```
-C:\Users\devin\OneDrive\Documents\Georgia_Tech\CS 4510
-```
+This repository was prepared for public documentation and archival purposes. Generated dependency folders, nested Git metadata, local build outputs, compressed archives, OS metadata, and grade calculator files were excluded during preparation.
