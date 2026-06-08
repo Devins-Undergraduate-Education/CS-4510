@@ -1,0 +1,61 @@
+\documentclass[11pt]{article}
+\usepackage{braket}
+\usepackage{enumitem}
+\usepackage{latexsym}
+\usepackage{amsfonts}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{xcolor}
+\usepackage{mathrsfs}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usetikzlibrary{automata}
+
+\newcommand{\NP}{\mathsf{NP}}
+\newcommand{\PH}{\mathsf{PH}}
+\newcommand{\PSPACE}{\mathsf{PSPACE}}
+\newcommand{\NPSPACE}{\mathsf{NPSPACE}}
+\newcommand{\EXP}{\mathsf{EXP}}
+\newcommand{\NEXP}{\mathsf{NEXP}}
+
+
+
+\renewcommand{\P}{\mathsf{P}}
+\setlength{\textheight}{8.5in}
+\setlength{\textwidth}{6.0in}
+\setlength{\headheight}{0in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\oddsidemargin}{-.5in}
+
+\input{preamble.tex}
+
+\newcommand{\solution}[1]{\paragraph{Solution}  }
+\newcommand{\bl}[1]{\textcolor{blue}{#1}}
+\newcommand{\rd}[1]{\textcolor{red}{#1}}
+
+\begin{document}
+\hw{7G: Church-Turing Thesis and Turing-Acceptability}{2/28/2025}{DONT FORGET TO PUT YOUR NAME HERE}{Due:3/7/2025}
+
+You should submit a typeset or \emph{neatly} written pdf on Gradescope.  The grading TA should not have to struggle to read what you've written; if your handwriting is hard to decipher, you will be asked to typeset your future assignments. Four bonus points if you use \LaTeX, and our template. You may collaborate with other students, but any written work should be your own. \textbf{Many of these problems have two sentence answers if you can apply the theorems proved in class}.
+
+
+\begin{enumerate} 
+
+    \item Suppose we have a push down automata with two stacks. It has nondeterministic transitions of the form $\texttt{read},(\texttt{pop1,pop2}) \rightarrow (\texttt{push1,push2})$. It reads from the input, pops from both stacks, and pushes to both stacks simultaneously. Give the state diagram of this PDA with two stacks to decide $\{ww ~|~ w \in \Sigma^*\}$. (Hint: Think about what allowed a single stack PDA to decide $ww^R$ but not $ww$?)
+    \item Prove that there exists an undecidable subset of $1^*$.
+    \item A \textbf{useless} state in a Turing machine is one that is never entered on any input string. Consider the problem of determining whether a Turing machine has any useless states. Show that the language of this problem is undecidable. Is it Turing Acceptable?
+    \item Define the language  
+    \[
+    L_0 = \{ \langle M \rangle \mid M \text{ halts on the empty string} \}
+    \]
+    Prove that \( L_0 \) is undecidable by constructing a many-to-one reduction from \( L_{\text{halt}} \). That is, construct a computable function \( f \) such that  
+    \[
+    \langle M, w \rangle \in L_{\text{halt}} \iff f(\langle M, w \rangle) \in L_0.
+    \]
+
+    
+\end{enumerate}
+    
+\end{document}
+
+
+

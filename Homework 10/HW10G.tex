@@ -1,0 +1,111 @@
+\documentclass[11pt]{article}
+\usepackage{braket}
+\usepackage{enumitem}
+\usepackage{latexsym}
+\usepackage{amsfonts}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{xcolor}
+\usepackage{mathrsfs}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usetikzlibrary{automata}
+
+\newcommand{\NP}{\mathsf{NP}}
+\newcommand{\PH}{\mathsf{PH}}
+\newcommand{\PSPACE}{\mathsf{PSPACE}}
+\newcommand{\NPSPACE}{\mathsf{NPSPACE}}
+\newcommand{\EXP}{\mathsf{EXP}}
+\newcommand{\NEXP}{\mathsf{NEXP}}
+
+\renewcommand{\P}{\mathsf{P}}
+\setlength{\textheight}{8.5in}
+\setlength{\textwidth}{6.0in}
+\setlength{\headheight}{0in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\oddsidemargin}{-.5in}
+
+\input{preamble.tex}
+
+\newcommand{\solution}[1]{\paragraph{Solution}}
+\newcommand{\bl}[1]{\textcolor{blue}{#1}}
+\newcommand{\rd}[1]{\textcolor{red}{#1}}
+
+\begin{document}
+\hw{10G: Savitch's and Non-deterministic Hierarchy Theorem}{4/13/2025}{DONT FORGET TO PUT YOUR NAME HERE}{Due:4/20/2025}
+
+You should submit a typeset or \emph{neatly} written pdf on Gradescope. The grading TA should not have to struggle to read what you've written; if your handwriting is hard to decipher, you will be asked to typeset your future assignments. Four bonus points if you use \LaTeX, and our template. You may collaborate with other students, but any written work should be your own. \textbf{Many of these problems have two-sentence answers if you can apply the theorems proved in class}.
+
+\begin{enumerate}
+
+
+  \item (10 points) \textbf{Savitch's Theorem.}\\[1mm]
+  Savitch's Theorem states that for any space-constructable function \(f(n) \ge \log n\),
+  \[
+    \text{NSPACE}\bigl(f(n)\bigr) \;\subseteq\; \text{DSPACE}\bigl(f(n)^2\bigr).
+  \]
+  \begin{enumerate}[label=(\alph*)]
+  
+    \item (6 points) Prove that any language \(L\) in \(\text{NSPACE}(n)\) also lies in \(\text{DSPACE}(n^2)\). Show the recursive “configuration reachability” approach that achieves this. 
+    \\
+    \begin{answer}
+    \end{answer}
+    
+    \item (4 points) Let \( M \) be a nondeterministic Turing machine that uses \( O(n) \) space on inputs of length \( n \). Estimate the total number of configurations of \( M \) and then deduce an upper bound (in terms of \( n \)) on the worst-case time complexity of the deterministic simulation.
+    
+    \begin{answer}
+    \end{answer}
+    
+  \end{enumerate}
+
+  \item (30 points) \textbf{Non-deterministic Time Hierarchy Theorem.}\\[1mm]
+  The NTIME Hierarchy Theorem says that for every proper complexity function \(T(n) \ge n\) and any \(T'(n)\) satisfying \(T(n+1)=o\bigl(T'(n)\bigr)\),
+  \[
+     \text{NTIME}\bigl(T(n)\bigr) \;\subsetneq\; \text{NTIME}\bigl(T'(n)\bigr).
+  \]
+  
+  \begin{enumerate}[label=(\alph*)]
+  
+    \item (10 points) Suppose 
+    \[
+      T_1(n) = 2^{n^2}
+      \quad\text{and}\quad
+      T_2(n) = n^4 \cdot 2^n.
+    \]
+    Which of the following is correct?
+    \
+    \begin{enumerate}[label=(\alph*)]
+      \item $\text{NTIME}\bigl(T_1(n)\bigr) = \text{NTIME}\bigl(T_2(n)\bigr)$
+      \item $\text{NTIME}\bigl(T_1(n)\bigr) \subsetneq \text{NTIME}\bigl(T_2(n)\bigr)$
+      \item $\text{NTIME}\bigl(T_2(n)\bigr) \subsetneq \text{NTIME}\bigl(T_1(n)\bigr)$
+    \end{enumerate}
+
+    Give a justification of your answer based on comparing \(2^{n^2}\) and \(n^4 \cdot 2^n\) and use NTIME Hierarchy Theorem to support your conclusion.
+    
+    \begin{answer}
+    \end{answer}
+    
+    \item (5 points) In one or two sentences, explain how the condition \(T(n+1) = o\bigl(T'(n)\bigr)\) ensures a strict separation (i.e., \(\subsetneq\)) between \(\text{NTIME}\bigl(T(n)\bigr)\) and \(\text{NTIME}\bigl(T'(n)\bigr)\).
+    \\
+    \begin{answer}
+    \end{answer}
+    
+    \vspace{4mm}
+
+    \item (5 points) Prove that any proper complexity function \( T(n) \) is non-decreasing. Briefly explain why this property is required in the context of the NTIME Hierarchy Theorem.
+    
+    \begin{answer}
+    \end{answer}
+    \vspace{4mm}
+    
+    
+    \item (10 points) Refer to the diagonalization strategy discussed in lecture: intervals \([1 \dots T(1)]\) “kill” \(M_1\), intervals \([T(1) \dots T(T(1))]\) kill \(M_2\), etc. Describe how this strategy constructs a nondeterministic Turing machine \(D\) that differs from every \(M_i\) in \(\text{NTIME}\bigl(T(n)\bigr)\). Also, explain why \(D\) still runs within \(\text{NTIME}\bigl(T'(n)\bigr)\). 
+    \\
+    \begin{answer}
+    \end{answer}
+    
+  \end{enumerate}
+  
+\end{enumerate}
+
+\end{document}
+

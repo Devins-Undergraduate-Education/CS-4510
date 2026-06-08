@@ -1,0 +1,93 @@
+\documentclass[11pt]{article}
+\usepackage{braket}
+\usepackage{enumitem}
+\usepackage{latexsym}
+\usepackage{amsfonts}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{xcolor}
+\usepackage{mathrsfs}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usetikzlibrary{automata}
+
+\newcommand{\NP}{\mathsf{NP}}
+\newcommand{\PH}{\mathsf{PH}}
+\newcommand{\PSPACE}{\mathsf{PSPACE}}
+\newcommand{\NPSPACE}{\mathsf{NPSPACE}}
+\newcommand{\EXP}{\mathsf{EXP}}
+\newcommand{\NEXP}{\mathsf{NEXP}}
+
+
+
+\renewcommand{\P}{\mathsf{P}}
+\setlength{\textheight}{8.5in}
+\setlength{\textwidth}{6.0in}
+\setlength{\headheight}{0in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\oddsidemargin}{-.5in}
+
+\input{preamble.tex}
+
+\newcommand{\solution}[1]{\paragraph{Solution}  }
+\newcommand{\bl}[1]{\textcolor{blue}{#1}}
+\newcommand{\rd}[1]{\textcolor{red}{#1}}
+
+\begin{document}
+\hw{9G: NP-Complete and Time Hierarchy}{4/06/2025}{DONT FORGET TO PUT YOUR NAME HERE}{Due:4/13/2025}
+
+You should submit a typeset or \emph{neatly} written pdf on Gradescope.  The grading TA should not have to struggle to read what you've written; if your handwriting is hard to decipher, you will be asked to typeset your future assignments. Four bonus points if you use \LaTeX, and our template. You may collaborate with other students, but any written work should be your own. \textbf{Many of these problems have two sentence answers if you can apply the theorems proved in class}.
+
+
+\begin{enumerate} 
+
+        \item (20 points) Prove that the following problems are NP-complete.
+        \begin{enumerate}
+          \item (10 points) \textbf{Longest Path Problem.} Given an undirected graph \( G = (V, E) \) and a positive integer \( K \leq |V| \), does \( G \) contain a \emph{simple path} (i.e., a path that visits no vertex more than once) with at least \( K \) edges?
+
+        \begin{answer}
+        \end{answer}
+        
+        \item (10 points) \textbf{DOUBLE-SAT.} \[
+\textsc{DOUBLE-SAT} = \left\{ \langle \varphi \rangle \mid \varphi \text{ is a Boolean formula with at least two satisfying assignments} \right\}.
+\]
+        \begin{answer}
+
+        \end{answer}
+
+            \end{enumerate}
+\item (10 points) \textbf{Time Hierarchy Theorem.} 
+
+Let \( \text{TIME}(f(n)) \) denote the class of languages decidable by a deterministic Turing machine in \( O(f(n)) \) time.
+
+Choose the correct relationship between the following two time complexity classes and prove your answer using asymptotic analysis and the Time Hierarchy Theorem:
+\begin{enumerate}
+    \item \( \text{TIME}(2^{n^2}) = \text{TIME}(n^4 \cdot 2^n) \)
+    \item \( \text{TIME}(2^{n^2}) \subset \text{TIME}(n^4 \cdot 2^n) \)
+    \item \( \text{TIME}(n^4 \cdot 2^n) \subset \text{TIME}(2^{n^2}) \)
+
+\end{enumerate}
+    \begin{answer}
+
+\end{answer}
+\item (10 points) \textbf{Savitch's Theorem.} 
+
+Savitch's Theorem states that for any space-constructable function  \( f(n) \ge \log n \),
+\[
+\text{NSPACE}(f(n)) \subseteq \text{DSPACE}(f(n)^2).
+\]
+
+\begin{enumerate}
+    \item (5 points) Use Savitch's Theorem to show that \( \text{NL} \subseteq \text{DSPACE}((\log n)^2) \).
+   
+    \item (5 points) Does Savitch's Theorem imply that \( \text{L} = \text{NL} \)? Briefly explain why or why not.
+
+\end{enumerate}
+ \begin{answer}
+
+\end{answer}
+\end{enumerate}
+    
+\end{document}
+
+
+

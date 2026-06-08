@@ -1,0 +1,98 @@
+\documentclass[11pt]{article}
+\usepackage{braket}
+\usepackage{enumitem}
+\usepackage{latexsym}
+\usepackage{amsfonts}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{xcolor}
+\usepackage{mathrsfs}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usetikzlibrary{automata}
+
+\newcommand{\NP}{\mathsf{NP}}
+\newcommand{\PH}{\mathsf{PH}}
+\newcommand{\PSPACE}{\mathsf{PSPACE}}
+\newcommand{\NPSPACE}{\mathsf{NPSPACE}}
+\newcommand{\EXP}{\mathsf{EXP}}
+\newcommand{\NEXP}{\mathsf{NEXP}}
+
+
+
+\renewcommand{\P}{\mathsf{P}}
+\setlength{\textheight}{8.5in}
+\setlength{\textwidth}{6.0in}
+\setlength{\headheight}{0in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\oddsidemargin}{-.5in}
+
+\input{preamble.tex}
+
+\newcommand{\solution}[1]{\paragraph{Solution}  }
+\newcommand{\bl}[1]{\textcolor{blue}{#1}}
+\newcommand{\rd}[1]{\textcolor{red}{#1}}
+
+\begin{document}
+\hw{8G: Church-Turing Thesis and Turing-Acceptability}{3/30/2025}{DONT FORGET TO PUT YOUR NAME HERE}{Due:4/06/2025}
+
+You should submit a typeset or \emph{neatly} written pdf on Gradescope.  The grading TA should not have to struggle to read what you've written; if your handwriting is hard to decipher, you will be asked to typeset your future assignments. Four bonus points if you use \LaTeX, and our template. You may collaborate with other students, but any written work should be your own. \textbf{Many of these problems have two sentence answers if you can apply the theorems proved in class}.
+
+
+\begin{enumerate} 
+
+    \item Find a problem that satisfies each of the following conditions:
+
+    \begin{enumerate}
+        \item (6 points) It is NP-hard but not in NP.
+
+        \begin{answer}
+            
+        \end{answer}
+        
+        \item (6 points) It is in NP but not NP-complete.
+
+        \begin{answer}
+            
+        \end{answer}
+    \end{enumerate}
+    
+    \item We know that the Hamiltonian Path Problem is NP-complete and the Euler Circuit Problem is solvable in polynomial time so it is in P. Using these two facts, prove whether the following problems are in P or in NP-complete by applying polynomial-time reductions:
+    \begin{enumerate}
+        \item (4 points) TSP Problem
+    
+        \begin{answer}
+            
+        \end{answer}
+        
+        \item (4 points) Integer Programming Problem
+        
+        \begin{answer}
+            
+        \end{answer}
+
+        \item (4 points) String Construction Problem: Given $n$ 2-length strings $t_1, t_2, \dots, t_n$, construct a string $s$ of length $n + 1$ such that the multiset $\{s_1s_2, s_2s_3, \dots, s_ns_{n+1}\}$ is equal to the given multiset $\{t_1, t_2, \dots, t_n\}$. For example, if $t_1 = ab$ and $t_2 = bc$, a valid solution is $s = abc$.
+        
+        \begin{answer}
+            
+        \end{answer}
+
+        \item (4 points) Multiset Split Problem: Given a multiset of $n$ even-sized integer sets $s_1, s_2, \dots, s_n$ (where each $|s_i|$ is even), find a split for each $s_i = p_i \cup q_i$ such that $|p_i| = |q_i| = \frac{1}{2} |s_i|$, and the union of all $p_i$'s equals the union of all $q_i$'s. For example, $s_1 = \{1, 1\}$, $s_2 = \{2, 2\}$, then one solution is $p_1 = q_1 = \{1\}$, $p_2 = q_2 = \{2\}$ 
+        
+        \begin{answer}
+            
+        \end{answer}
+
+    \end{enumerate}
+
+    \item (12 points) Let $M$ be an $f(n)$ space bounded machine and consider its computation on some word $w$. Prove that there exists a CNF formula $\phi$ of size $O(f(n)^2)$ such that for any strings $C_i,C_{i+1}$, We have that $\phi(C_{i}, C_{i+1}) = 1$ if and only if $C_i, C_{i+1}$ are configurations of $M$ on $w$ and $C_i \vdash C_{i+1}$ via $\delta$ of $M$.
+    
+    \begin{answer}
+        
+    \end{answer}
+
+\end{enumerate}
+    
+\end{document}
+
+
+

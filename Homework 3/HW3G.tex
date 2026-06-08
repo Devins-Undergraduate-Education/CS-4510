@@ -1,0 +1,88 @@
+\documentclass[11pt]{article}
+\usepackage{enumitem}
+\usepackage{latexsym}
+\usepackage{amsfonts}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{xcolor}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usetikzlibrary{automata}
+
+\setlength{\textheight}{8.5in}
+\setlength{\textwidth}{6.0in}
+\setlength{\headheight}{0in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\oddsidemargin}{-.5in}
+
+\input{preamble.tex}
+
+\newcommand{\solution}[1]{\paragraph{Solution}  }
+\newcommand{\bl}[1]{\textcolor{blue}{#1}}
+\newcommand{\rd}[1]{\textcolor{red}{#1}}
+
+\begin{document}
+\hw{3: Pumping Lemma and Context Free Grammars}{1/26/2025}{DONT FORGET TO PUT YOUR NAME HERE}{Due:2/3/2025}
+
+You should submit a typeset or \emph{neatly} written pdf on Gradescope.  The grading TA should not have to struggle to read what you've written; if your handwriting is hard to decipher, you will be asked to typeset your future assignments. Three bonus points if you use \LaTeX, and our template. You may collaborate with other students, but any written work should be your own. 
+%TOPICS: PUMPING LEMMA, CFLS. 
+\begin{enumerate}
+    \item Let $D_1, D_2$ be two DFAs of $n,m$ states respectively, both with the same alphabet. Find a function $f(n,m)$ and prove the following. If $L(D_1) \neq L(D_2)$ then the shortest string they disagree on has length $\leq f(n,m)$. Discuss the consequences of the contrapositive of this statement.
+
+    \begin{answer}
+    \end{answer}
+
+    \item Prove that the following language is not regular using the pumping lemma:
+    \[
+    L \;=\; \{\, 1^n \,\mid\, n \text{ is prime}\}.
+    \]
+
+    \begin{answer}
+    \end{answer}
+
+\vspace{1em}  
+    \item 
+    \begin{enumerate}
+        \item Give CFGs for each of the following languages: $\{\lambda\}$, $\emptyset$, $\{a\}$, $\{b\}$.    
+    
+    \begin{answer}
+    \end{answer}
+        \item Prove that the class of context-free languages is closed under union, concatenation, and Kleene star.
+    
+    \begin{answer}
+    \end{answer}
+        \item Why does this imply every regular language is context-free?
+    
+    \begin{answer}
+    \end{answer}
+    \end{enumerate}    
+
+\vspace{1em}    
+
+\item Give CFGs for the following:
+    \begin{enumerate}
+        \item $\{a^nb^m~|~ n\neq m\}$     
+    
+    \begin{answer}
+    \end{answer}
+        \item $\{a^ib^j~|~x,y \in \naturals, $ $x+y = i$ and $4x+3y = j\}$.    
+    
+    \begin{answer}
+    \end{answer}
+        \item The complement of $\{a^nb^n ~|~ n \in \mathbb{N}\}$ \footnote{CFLs are not closed under intersection or complement in general, this one is just special.}  
+        
+    \begin{answer}
+    \end{answer}
+        \item $\{w \in \Sigma^*~|~ \#a(w)+\#b(w) = \#c(w)+\#d(w)\}$ with $\Sigma = \{a,b,c,d\}$    
+    
+    \begin{answer}
+    \end{answer}
+    \end{enumerate}
+
+  
+
+
+\vspace{1em}    
+\end{enumerate}
+
+\end{document}

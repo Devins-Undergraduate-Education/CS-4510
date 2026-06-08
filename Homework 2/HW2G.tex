@@ -1,0 +1,106 @@
+\documentclass[11pt]{article}
+\usepackage{enumitem}
+\usepackage{latexsym}
+\usepackage{amsfonts}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{xcolor}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usetikzlibrary{automata}
+
+\setlength{\textheight}{8.5in}
+\setlength{\textwidth}{6.0in}
+\setlength{\headheight}{0in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\oddsidemargin}{-.5in}
+
+\input{preamble.tex}
+
+\newcommand{\solution}[1]{\paragraph{Solution}  }
+\newcommand{\bl}[1]{\textcolor{blue}{#1}}
+\newcommand{\rd}[1]{\textcolor{red}{#1}}
+
+\begin{document}
+\hw{2: NFAs and Regular Language Properties}{1/17/2024}{DONT FORGET TO PUT YOUR NAME HERE}{Due:1/24/2024}
+
+You should submit a typeset or \emph{neatly} written pdf on Gradescope.  The grading TA should not have to struggle to read what you've written; if your handwriting is hard to decipher, you will be asked to typeset your future assignments. Three bonus points if you use \LaTeX, and our template. You may collaborate with other students, but any written work should be your own. 
+
+\begin{enumerate}
+    \item 
+    \begin{enumerate}
+        \item  Let $L$ be any language. Define $L' = \{w \in \Sigma^* ~|~ wx \in L, x \in \Sigma^*\}$. Prove that if $L$ is regular, then so is $L'$. This language is essentially the language of prefixes of $L$.
+
+        \begin{answer}
+            
+        \end{answer}
+        
+        \item The symmetric difference of $A$ and $B$, denoted $A \oplus B$, is the set of elements in $A$ or in $B$, but not in both. For example, if $L=\{\varepsilon, 0\}$ and $L'=\{\varepsilon, 1\}$ then $L\oplus L' = \{0,1\}$. Prove that $REG$ (the set of regular languages) is closed under symmetric difference.
+        
+        \begin{answer}
+            
+        \end{answer}
+    \end{enumerate}
+
+
+    \item Let $\Sigma = \{a,b\}$. Let $L$ be a regular language. Suppose that the DFA for $L$ has the property that $|F| = 1$. Prove that if $x,y \in L$ then for all $z \in \Sigma^*$ both $xz,yz \in L$ or both $xz,yz \not \in L$. 
+
+    \begin{answer}
+        
+    \end{answer}
+
+    \item Let $\Sigma = \{a,b\}$ and consider the language $(a \cup b)^*a(a\cup b)^{n-1}$. 
+    \begin{enumerate}
+        \item Characterize what strings are in this language, in english
+
+        \begin{answer}
+            
+        \end{answer}
+        \item Describe an NFA which decides/accepts this language in $n+1$ states.
+
+        \begin{answer}
+            
+        \end{answer}
+        \item Describe a DFA which decides/accepts this language in $2^{n}$ states.
+
+        \begin{answer}
+
+        \end{answer}
+
+        \item Prove there is no DFA of any fewer states. 
+
+        \begin{answer}
+            
+        \end{answer}
+        \end{enumerate}
+
+    \item 
+    \begin{enumerate}
+        %\item Let NFA \textit{N} have $|F|$ accept states. After conversion via the subset construction algorithm, how many accept states will there be in the resulting DFA?
+        \item Consider the power set construction. If a state is unreachable in the output DFA, what does this intuitively mean in the original NFA for the corresponding set of states?\\
+        \begin{answer}
+            
+        \end{answer}
+        \item Let $N = (Q, \Sigma, q_0, \delta, F)$ be an NFA with the following properties:\\
+        1. For each $q \in Q$ and $a \in \Sigma$, $|\delta(q,a)|\leq 1$.\\
+        2. There are no epsilon transitions. 
+        
+        Suppose you constructed a DFA from $N$ using the power set construction. Futhermore, suppose you removed all states not reachable from the start state by any string. Prove that this DFA has at most $|Q| + 1$ states.\\
+        \begin{answer}
+            
+        \end{answer}
+    \end{enumerate}
+
+\end{enumerate}
+\end{document}
+%%    
+
+    
+
+% A homomorphism is a function $h:\Sigma^* \rightarrow \Sigma^*$ with the property that for $x,y \in \Sigma^*$ that $h(xy) = h(x)h(y)$. we may define a function to operate on a language as $$h(L) = \{h(w)~|~w \in L\}$$ Prove that if $L$ is regular, and $h$ is any homomorphism, then $h(L)$ is regular. 
+
+%Let N = (Q, \Sigma, q_0, \delta, F) be an NFA with the following properties:
+1. For each q \in Q and a \in \Sigma, $|\delta(q,a)|\leq 1$.
+2. There are no epsilon transitions. 
+
+Suppose you constructed a DFA from N using the powerset construction. Futhermore, suppose you removed all states not reachable from the start state by any string. Prove that this DFA has at most |Q| + 1 states.

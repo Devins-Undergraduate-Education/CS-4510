@@ -1,0 +1,43 @@
+\documentclass[11pt]{article}
+\usepackage{enumitem}
+\usepackage{latexsym}
+\usepackage{amsfonts}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{xcolor}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usetikzlibrary{automata}
+
+\setlength{\textheight}{8.5in}
+\setlength{\textwidth}{6.0in}
+\setlength{\headheight}{0in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\oddsidemargin}{-.5in}
+
+\input{preamble.tex}
+
+\newcommand{\solution}[1]{\paragraph{Solution}  }
+\newcommand{\bl}[1]{\textcolor{blue}{#1}}
+\newcommand{\rd}[1]{\textcolor{red}{#1}}
+
+\begin{document}
+\hw{5: Turing Machines}{2/11/2025}{DONT FORGET TO PUT YOUR NAME HERE}{Due:2/21/2025}
+
+You should submit a typeset or \emph{neatly} written pdf on Gradescope.  The grading TA should not have to struggle to read what you've written; if your handwriting is hard to decipher, you will be asked to typeset your future assignments. Three bonus points if you use \LaTeX, and our template. You may collaborate with other students, but any written work should be your own. 
+
+\begin{enumerate}
+    \item Give the state diagram of a Turing machine which begins with $w\#$ on its tape for any $w \in \Sigma^*$ and halts with $w\#w$ on its tape. The input alphabet is $\Sigma = \{a,b\}$ and the tape alphabet may be $\Gamma = \{a,b,\dot{a}, \dot{b},\#,\textvisiblespace\}$. This Turing machine performs the copy ability. We gave a decision version of this in class. You are giving the computation version. 
+
+    \item Give the sequence of configurations of your state diagram from question 2 beginning from $q_0aba\#$. Each on a new line please. (Hint, why not write a program for this)
+    
+    \item Give a high level, detailed, description of a Turing machine which computes the projection function $U(n,i,x_1,x_2,...,x_n) = x_i$. Do not give a state diagram. The Turing machine must begin with $1^n \# 1^i \# x_1 \# ... \# x_n$ and halt with just $x_i$ on its tape leftshifted fully. If this was psuedocode, the Turing machine would compute the following algorithm:
+    \begin{verbatim}
+        def U(n, i, A[]):
+            return A[i]
+    \end{verbatim}
+
+    \item Prove that the computable functions are closed under composition. 
+\end{enumerate}
+\end{document}
+
