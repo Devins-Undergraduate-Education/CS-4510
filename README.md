@@ -1,7 +1,13 @@
 ﻿# Automata and Complexity (CS 4510)
 
-Coursework archive for Georgia Tech CS 4510, including project, lab, homework, and assignment materials kept for undergraduate education documentation.
+Theory coursework archive for automata, computability, and complexity, including technical homework on formal languages, machines, reductions, and complexity classes.
 
-## Notes
+## Included Materials
 
-Generated dependency folders, nested Git metadata, local build outputs, archives, and OS metadata were excluded when this repository was prepared.
+- Theory homework folders
+- Written solutions
+- Course reference artifacts
+
+## Archive Notes
+
+This repository was prepared for public documentation and archival purposes. Generated dependency folders, nested Git metadata, local build outputs, compressed archives, OS metadata, and grade calculator files were excluded during preparation.
